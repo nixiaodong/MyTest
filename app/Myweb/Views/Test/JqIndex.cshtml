@@ -1,0 +1,114 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JqIndex</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        ; (function ($, doc, win) {
+            var VM = function (opt) {
+                this.setting = {};
+                $.extend(this.setting, opt.data);
+
+                // 初始化VM
+                this.init();
+            };
+            VM.prototype = {
+                init: function () {
+                    this.render('input');
+                    this._render('p');
+                },
+                render: function (dom) {
+                    var self = this
+                      , data = self.setting;
+                    $(dom).each(function () {
+                        var _attr = $(this).attr('xq-model');
+                        if (_attr !== undefined) {
+                            if (data[_attr] !== undefined) {
+                                $(this).attr('value', data[_attr]);
+                                self.inputChange($(this), _attr);
+                            }
+                        }
+                    });
+                },
+                _render: function (dom) {
+                    var self = this;
+                    $(dom).each(function () {
+                        var val = $(this).html() || $(this).text() || $(this).val();
+                        if (val.indexOf('}}') !== -1 && val.indexOf('}}') !== -1) {
+                            val = val.replace(/^s+|{{|s+/, '');
+                            val = val.replace(/}}|[\s+]/g, '');
+                            self.labelChange(this, val);
+                        }
+                    })
+                },
+                labelRender: function (dom, _attr) {
+                    var self = this
+                      , data = self.setting;
+                    $(dom).each(function () {
+                        var val = $(this).attr(_attr);
+                        if (val !== undefined) {
+                            if (data[_attr] !== undefined) {
+                                $(this).html(data[_attr]) || $(this).text(data[_attr]) || $(this).val(data[_attr]);
+                            }
+                        }
+                    })
+                },
+                inputChange: function (_this, _attr) {
+                    var self = this
+                      , data = self.setting;
+                    _this.unbind('keydown');
+                    _this.keydown(function () {
+                        _this.unbind('keyup');
+                        _this.keyup(function () {
+                            var changeVal = _this.val()
+                              , oldVal = data[_attr];
+                            data[_attr] = changeVal;
+                            self.render('input');
+                            self.labelRender('p', _attr);
+                        })
+                    })
+                },
+                labelChange: function (_this, val) {
+                    var self = this
+                      , data = self.setting;
+                    if (val !== undefined) {
+                        if (data[val] !== undefined) {
+                            $(_this).html(data[val]) || $(_this).text(data[val]) || $(_this).val(data[val]);
+                        }
+                    }
+                    $(_this).attr(val, '')
+                }
+            };
+            window.VM = VM;
+        })(jQuery, document, window);
+    </script>
+    <script>
+        $(function () {
+            new VM({
+                data: {
+                    msg: 'hello',
+                    my: 'hehe'
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" xq-model="msg" />
+        <p>
+            {{ msg }}
+        </p>
+        <input type="text" xq-model="my" />
+        <p>
+            {{ my }}
+        </p>
+    </div>
+</body>
+</html>

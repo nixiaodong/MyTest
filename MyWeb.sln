@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1、app", "1、app", "{748EB7C3-0387-484F-A316-6C53A7320970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myweb", "app\Myweb\Myweb.csproj", "{2ADBD10B-0133-41FF-B43D-F6247E14FE3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dll", "dll", "{45E117F9-7B3A-484F-B560-DA8EF22FFF4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textdall", "textdall\textdall.csproj", "{E71F68F1-36CF-42A1-9800-AADE47BFACAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pdf2Word", "Pdf2Word\Pdf2Word.csproj", "{B80283C2-713D-4BE4-9C49-F98F466A86FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ADBD10B-0133-41FF-B43D-F6247E14FE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADBD10B-0133-41FF-B43D-F6247E14FE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADBD10B-0133-41FF-B43D-F6247E14FE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADBD10B-0133-41FF-B43D-F6247E14FE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E71F68F1-36CF-42A1-9800-AADE47BFACAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71F68F1-36CF-42A1-9800-AADE47BFACAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71F68F1-36CF-42A1-9800-AADE47BFACAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71F68F1-36CF-42A1-9800-AADE47BFACAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80283C2-713D-4BE4-9C49-F98F466A86FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80283C2-713D-4BE4-9C49-F98F466A86FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80283C2-713D-4BE4-9C49-F98F466A86FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80283C2-713D-4BE4-9C49-F98F466A86FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2ADBD10B-0133-41FF-B43D-F6247E14FE3A} = {748EB7C3-0387-484F-A316-6C53A7320970}
+		{B80283C2-713D-4BE4-9C49-F98F466A86FC} = {748EB7C3-0387-484F-A316-6C53A7320970}
+		{E71F68F1-36CF-42A1-9800-AADE47BFACAE} = {45E117F9-7B3A-484F-B560-DA8EF22FFF4F}
+	EndGlobalSection
+EndGlobal

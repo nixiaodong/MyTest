@@ -1,0 +1,13 @@
+F:\myprotect_test\MyWeb\Pdf2Word\bin\Debug\Pdf2Word.exe.config
+F:\myprotect_test\MyWeb\Pdf2Word\bin\Debug\Pdf2Word.exe
+F:\myprotect_test\MyWeb\Pdf2Word\bin\Debug\Pdf2Word.pdb
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.Form1.resources
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.Properties.Resources.resources
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.csproj.GenerateResource.Cache
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.exe
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.pdb
+F:\myprotect_test\MyWeb\Pdf2Word\bin\Debug\Pdf2Word.exe.manifest
+F:\myprotect_test\MyWeb\Pdf2Word\bin\Debug\Pdf2Word.application
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.exe.manifest
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.application
+F:\myprotect_test\MyWeb\Pdf2Word\obj\Debug\Pdf2Word.csprojResolveAssemblyReference.cache

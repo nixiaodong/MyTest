@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ErwmIndex</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#decoderTxt").val("");
+            $("#strData").val("");
+            $("#createCode").click(function () {
+                var strData = $("#strData").val();
+                var level = $("#level").val();
+                var encoding = $("#encoding").val();
+                var version = $("#version").val();
+                var scale = $("#scale").val();
+                $.post("/Test/CreateErwm", { strData: strData, level: level, qrEncoding: encoding, version: version, scale: scale, random: Math.random() }, function (data) {
+                    $("img").attr("src", data);
+                });
+            });
+
+            $("#decoderCode").click(function () {
+                $.post("/Test/CodeDecoder", { filePath: $("img").attr("src"), random: Math.random() }, function (data) {
+                    $("#decoderTxt").val(data);
+                });
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>要生成的文字（支持中文）：<input type="text" id="strData" value="" style="width:250px;" /></p>
+
+        <p>
+            Encoding:<select id="encoding">
+                <option value="Byte">Byte</option>
+                <option value="AlphaNumeric">AlphaNumeric</option>
+                <option value="Numeric">Numeric</option>
+            </select>
+
+        </p>
+        <p>
+            Correction Level:<select id="level">
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="Q">Q</option>
+                <option value="H">H</option>
+            </select>
+        </p>
+        <p>Version:<input id="version" type="text" value="8" /></p>
+        <p>scale:<input id="scale" type="text" value="4" /></p>
+        <img src="" alt="" />
+        <input type="text" value="" id="decoderTxt" style="width:250px;" />
+        <input id="createCode" type="button" value="生成" />
+        <input id="decoderCode" type="button" value="解码" />
+    </div>
+</body>
+</html>

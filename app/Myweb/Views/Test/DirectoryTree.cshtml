@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>目录树</title>
+    <style type="text/css">
+        .content {
+            width: 100%;
+        }
+
+            .content span {
+                display: inline-block;
+            }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>
+            <div style=" background-color: #808080;">
+                <span>+</span><span>title</span>
+            </div>
+            <div>
+                :....<span>uutyy</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>
+            @ViewBag.encrypted
+        </h3>
+        <h2>
+            @ViewBag.Decrypt
+        </h2>
+        <br />
+
+        <h3>
+            @ViewBag.encrypoed
+        </h3>
+        <h4>
+            @ViewBag.decryptoed
+        </h4>
+    </div>
+</body>
+</html>
